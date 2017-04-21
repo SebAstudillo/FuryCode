@@ -1,8 +1,8 @@
 When(/^Ingresa una letra$/) do
-  visit '/', :post, "field_name=value"
+  visit '/', :post, "letra=a"
 end
 
-Then(/^Muestre la letra"(.*)"$/) do |text|
-   last_response.body.should =~ /#{text}/m
+Then(/^Muestre la letra a$/) do
+   last_response.body.should =~ /#{"a"}/m
 end
 
