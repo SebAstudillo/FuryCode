@@ -7,7 +7,9 @@ class Juego
 		@intentos = 0
 	end
 	def buscarletra(l)
-		if @palabra != l
+		if @palabra == l
+			return true
+		else
 			@intentos += 1
 			return false
 		end 
