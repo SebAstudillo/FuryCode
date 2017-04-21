@@ -1,4 +1,6 @@
 require 'sinatra'
+require './lib/juego'
+
 @@semilla = "a"
 @@letra 
 get '/' do
@@ -7,9 +9,12 @@ end
 
 post '/' do
    @letra = params[:letra]
-   if (@@semilla == @letra)
-	@mensaje = "Hay coincidencia"
-   end
+	j= Juego.new
+	r = j.buscarletra(@letra)  
+	@intentos = j.intentos
+	if (r != false)
+		@mensaje = "Hay coincidencia"
+   	end
     erb :index
     
 end
