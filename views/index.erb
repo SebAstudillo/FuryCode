@@ -1,0 +1,15 @@
+<html><body>
+<h1>Ahorcado</h1>
+<h2>Fury Code</h2>
+<ul>
+<li>Ingresar la letra para adivinar la letra</li>
+</ul>
+Ingresar letra:
+
+<form method="POST" action="/letra">
+<input type="text" id="letra" name="letra"/>
+<input type="submit" value="Verificar"/>
+<label>Muestre la letra ingresada <%= @letra%></label>
+<label><%= @mensaje %></label>
+</form>
+</body></html>
