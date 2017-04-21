@@ -5,4 +5,7 @@ end
 Then(/^Muestre la letra a$/) do
    last_response.body.should =~ /#{"a"}/m
 end
+Then(/^Muestre coincidencia$/) do
+	   last_response.body.should =~ /#{"Hay coincidencia"}/m
+end
 
