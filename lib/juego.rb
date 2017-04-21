@@ -12,5 +12,13 @@ class Juego
 			return false
 		end 
 	end
+	def isFinJuego()
+		if intentos() == 7
+			return true
+		end 
+	end
+        def intentos()
+		return @intentos
+        end
 
 end

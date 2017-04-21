@@ -15,3 +15,11 @@ describe "Juego" do
 		expect(r).to eq false
 	end
 end 
+describe "Juego" do
+	it "Ingreso 7 veces la letra z y como resultado Fin de Juego" do
+		j= Juego.new
+		7.times {j.buscarletra("z")}
+		r= j.isFinJuego()
+		expect(r).to eq true
+	end
+end 
