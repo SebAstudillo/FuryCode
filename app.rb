@@ -1,5 +1,6 @@
 require 'sinatra'
 @@semilla = "a"
+@@letra 
 get '/' do
     erb :index
 end
